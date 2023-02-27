@@ -86,6 +86,7 @@ public class LoginView implements LoginViewCallBack{
     public void signupSuccessful(User user) {
         System.out.println("\nSignup Successful.");
         System.out.println("Welcome "+user.getUserName());
-        new UserView(user).init();
+        System.out.println("Returning to the Login Page.Login to continue");
+        this.init();
     }
 }
