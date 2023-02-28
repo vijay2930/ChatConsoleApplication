@@ -50,8 +50,8 @@ public class UserView implements UserViewCallBack{
 
     @Override
     public void searchUserByName(List<User> userList) {
-        System.out.println("Find User to Chat");
-        System.out.println("-----------------");
+        System.out.println("Search User to Chat");
+        System.out.println("-------------------");
         List<String> namelist=new ArrayList<>();
         for (User user1:userList) {
             if(user1.getUserName().equals(this.user.getUserName())){
@@ -81,39 +81,25 @@ public class UserView implements UserViewCallBack{
         }
         int i=0;
         int j=0;
+        System.out.println();
+        System.out.println("\u001B[1m"+"<== "+user2.getUserName().toUpperCase()+" ==>"+"\u001B[0m");
+        System.out.println();
         while (i<outgoing.size() && j<incoming.size()){
             if(i<outgoing.size() && outgoing.get(i).getId()<incoming.get(j).getId()){
-                System.out.println("*********************************************");
-                System.out.printf("%20s\n","you");
-                System.out.println("*********************************************");
-                    System.out.printf("%-20s\n",outgoing.get(i).getMessage());
-                System.out.println("---------------------------------------------");
+                    System.out.printf("%50s\n",outgoing.get(i).getMessage());
                 i++;
             }
             else if(j<incoming.size() && outgoing.get(i).getId()>incoming.get(j).getId()){
-                System.out.println("*********************************************");
-                System.out.printf("%20s\n",user2.getUserName());
-                System.out.println("*********************************************");
-                System.out.printf("%-20s\n",incoming.get(j).getMessage());
-                System.out.println("---------------------------------------------");
+                System.out.printf("%-50s\n",incoming.get(j).getMessage());
                 j++;
             }
         }
         while (i<outgoing.size()){
-            System.out.println("*********************************************");
-            System.out.printf("%20s\n","you");
-            System.out.println("*********************************************");
-                System.out.printf("%-20s\n",outgoing.get(i).getMessage());
-            System.out.println("---------------------------------------------");
+                System.out.printf("%50s\n",outgoing.get(i).getMessage());
             i++;
         }
-
         while(j<incoming.size()) {
-            System.out.println("*********************************************");
-            System.out.printf("%20s\n",user2.getUserName());
-            System.out.println("*********************************************");
-                System.out.printf("%-20s\n",incoming.get(j).getMessage());
-            System.out.println("\n---------------------------------------------");
+                System.out.printf("%-50s\n",incoming.get(j).getMessage());
             j++;
         }
         String msg=Read.getContent("Enter msg:");
