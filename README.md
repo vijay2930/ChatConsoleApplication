@@ -1,4 +1,4 @@
-# Chat Console Application
+                                                                             # Chat Console Application
 This is a simple console application that allows users to have one-on-one chat conversations, built using Java.
 
 Modules:
