@@ -19,3 +19,5 @@ Requirements <br>
 Java SDK (version 8 or higher) <br>
 
 mysql-connector-java-8.0.11.jar - http://www.java2s.com/example/jar/m/download-mysqlconnectorjava8011jar-file.html
+
+video - https://youtu.be/HU0fluI3iLs
